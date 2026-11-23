@@ -1,5 +1,5 @@
 /**
- * Maprisma App Catalog & Layout Config (Managed by Netcup Control · sha256:7610838ca987)
+ * Maprisma App Catalog & Layout Config (Managed by Netcup Control · sha256:6b7408c4e566)
  * -----------------------------------------------------------------------------------
  * Source of truth: /mnt/Data/Projects/netcup-control/state/site-control.json
  * Regenerate via: netcup-control-core apply
@@ -48,12 +48,12 @@ window.MAPRISMA_APPS = [
   {
     "id": "maprisma",
     "name": "Maprisma",
-    "version": "v0.14.7",
+    "version": "v2.1.5",
     "repoSlug": "maprisma/maprisma",
     "tagline": "Your AI agents, local LLMs, models & MCP tools on one visual map",
     "tagline_de": "Deine KI-Agenten, lokalen LLMs, Modelle & MCP-Tools auf einer Karte",
-    "description": "See and connect your entire local and cloud AI setup on one interactive map. Draw a line to wire coding agents (Claude Code, Codex, Copilot, Gemini, Antigravity, OpenCode, Pi) to local LLMs (llama.cpp, Ollama, LM Studio, vLLM), MCP servers, and skill folders — with live agent activity reporting, an opt-in local activity log, SHA-256 verified installs, security checks, and full Undo.",
-    "description_de": "Sieh und verbinde dein gesamtes lokales und Cloud-KI-Setup auf einer interaktiven Karte. Ziehe einfach eine Linie, um Coding-Agenten (Claude Code, Codex, Copilot, Gemini, Antigravity, OpenCode, Pi) mit lokalen LLMs (llama.cpp, Ollama, LM Studio, vLLM), MCP-Servern und Skill-Ordnern zu verknüpfen — inklusive Live-Aktivitätsbericht für laufende Agenten, optionalem lokalen Aktivitätsprotokoll, SHA-256-Prüfung, Sicherheitscheck und Rückgängig-Funktion.",
+    "description": "See, connect and put to work your entire local and cloud AI setup. Draw a line to wire coding agents (Claude Code, Codex, Copilot, Gemini, Antigravity, OpenCode, Pi) to local LLMs (llama.cpp, Ollama, LM Studio, vLLM), MCP servers, and skill folders — and plan and run whole projects with a team of agents on the Projects tab, the AI Project Center: a lead, implementers and a read-only reviewer, with your approval before anything runs. Live agent activity reporting, an opt-in local activity log, SHA-256 verified installs, security checks, and full Undo.",
+    "description_de": "Sieh, verbinde und nutze dein gesamtes lokales und Cloud-KI-Setup. Ziehe eine Linie, um Coding-Agenten (Claude Code, Codex, Copilot, Gemini, Antigravity, OpenCode, Pi) mit lokalen LLMs (llama.cpp, Ollama, LM Studio, vLLM), MCP-Servern und Skill-Ordnern zu verknüpfen — und plane und führe ganze Projekte mit einem Team aus Agenten im Projekte-Tab aus, dem AI Project Center: Leitung, Umsetzung und ein Prüfer nur mit Lesezugriff, und nichts läuft ohne deine Freigabe. Dazu Live-Aktivitätsberichte, ein optionales lokales Aktivitätsprotokoll, SHA-256-geprüfte Installationen, Sicherheitscheck und Rückgängig-Funktion.",
     "category": "ai",
     "categoryLabel": "AI & Voice",
     "categoryLabel_de": "KI & Sprache",
@@ -70,16 +70,32 @@ window.MAPRISMA_APPS = [
     "releases": "https://github.com/maprisma/maprisma/releases",
     "installCmd": "# Download the latest release archive from GitHub Releases, verify & install:\nsha256sum -c maprisma-*-x86_64.tar.gz.sha256\ntar -xzf maprisma-*-x86_64.tar.gz && cd maprisma-*\n./install.sh",
     "highlights": [
+      "New in 2.1.5: run projects on a schedule — daily, on chosen weekdays or every few hours, even while Maprisma is closed",
+      "New in 2.1.5: drag and drop to move cards and boxes, Ctrl+Up/Down, and a list of every keyboard shortcut",
+      "AI Project Center: plan & run projects with a team of agents, approved by you",
       "Draw-to-connect 2D/3D map with live preview & Undo",
       "Live agent activity reports & opt-in local activity log (TXT/JSON/MCP)",
       "SHA-256 verified local LLM downloads & per-agent security check"
     ],
     "highlights_de": [
+      "Neu in 2.1.5: Projekte nach Zeitplan ausführen — täglich, an gewählten Wochentagen oder alle paar Stunden, auch wenn Maprisma geschlossen ist",
+      "Neu in 2.1.5: Karten und Boxen per Drag & Drop verschieben, Strg+Hoch/Runter und eine Liste aller Tastenkürzel",
+      "AI Project Center: Projekte mit einem Agenten-Team planen & ausführen, mit deiner Freigabe",
       "Verbinden per Linie auf der 2D-/3D-Karte mit Vorschau & Undo",
       "Live-Aktivitätsberichte & optionales lokales Aktivitätsprotokoll (TXT/JSON/MCP)",
       "SHA-256-geprüfte lokale LLM-Downloads & Sicherheitscheck pro Agent"
     ],
     "screenshots": [
+      {
+        "src": "assets/screenshots/maprisma-projects-tab.webp",
+        "caption": "The Projects tab with a project open, next to the AI Map",
+        "caption_de": "Der Projekte-Tab mit einem geöffneten Projekt, neben der KI-Karte"
+      },
+      {
+        "src": "assets/screenshots/maprisma-project-center.webp",
+        "caption": "AI Project Center: a project's goal, its plan and its team of agents",
+        "caption_de": "AI Project Center: Ziel, Plan und Agenten-Team eines Projekts"
+      },
       {
         "src": "assets/screenshots/maprisma-map.webp",
         "caption": "Visual map connecting MCP servers, coding agents, providers, and local models",
@@ -618,7 +634,7 @@ window.MAPRISMA_APPS = [
   {
     "id": "addons",
     "name": "Maprisma Add-ons",
-    "version": "v0.14.6",
+    "version": "v2.1.5",
     "repoSlug": "maprisma/maprisma-addons",
     "tagline": "Cryptographically signed, data-only agent & LLM adapters for Maprisma",
     "tagline_de": "Kryptografisch signierte, reine Daten-Adapter für Agenten & lokale LLMs",
