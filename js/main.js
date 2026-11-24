@@ -7,6 +7,71 @@
   const apps = window.MAPRISMA_APPS || [];
   const i18n = window.MAPRISMA_I18N || { en: {}, de: {} };
 
+  const MACOS_RELEASES = {
+    maprisma: {
+      repoSlug: "maprisma/macos-maprisma",
+      version: "v0.14.8",
+      github: "https://github.com/maprisma/macos-maprisma",
+      releases: "https://github.com/maprisma/macos-maprisma/releases",
+      installCmd:
+        "# Download Maprisma-macos-arm64.zip & .sha256 from GitHub Releases:\n" +
+        "shasum -a 256 -c Maprisma-macos-arm64.zip.sha256\n" +
+        "unzip Maprisma-macos-arm64.zip\n" +
+        "xattr -cr Maprisma.app\n" +
+        "mv Maprisma.app /Applications/\n" +
+        "# Or build from source on Apple Silicon:\n" +
+        "git clone https://github.com/maprisma/macos-maprisma.git\n" +
+        "cd macos-maprisma && ./install-mac.sh"
+    },
+    dictation: {
+      repoSlug: "maprisma/macos-dictation",
+      version: "v0.1.0",
+      github: "https://github.com/maprisma/macos-dictation",
+      releases: "https://github.com/maprisma/macos-dictation/releases",
+      installCmd:
+        "# Download Maprisma-Dictation-macOS.zip & .sha256 from GitHub Releases:\n" +
+        "shasum -a 256 -c Maprisma-Dictation-macOS.zip.sha256\n" +
+        "unzip Maprisma-Dictation-macOS.zip\n" +
+        'xattr -cr "Maprisma Dictation.app"\n' +
+        'mv "Maprisma Dictation.app" /Applications/\n' +
+        "# Optional local Metal Whisper server:\n" +
+        "brew install whisper-cpp\n" +
+        "# Or build from source on Apple Silicon:\n" +
+        "git clone https://github.com/maprisma/macos-dictation.git\n" +
+        "cd macos-dictation && ./install-mac.sh"
+    },
+    "llm-monitor": {
+      repoSlug: "maprisma/macos-llm-monitor",
+      version: "v0.2.0",
+      github: "https://github.com/maprisma/macos-llm-monitor",
+      releases: "https://github.com/maprisma/macos-llm-monitor/releases",
+      installCmd:
+        "# Download Maprisma-LLM-Monitor-macOS.zip & .sha256 from GitHub Releases:\n" +
+        "shasum -a 256 -c Maprisma-LLM-Monitor-macOS.zip.sha256\n" +
+        "unzip Maprisma-LLM-Monitor-macOS.zip\n" +
+        'xattr -cr "Maprisma LLM Monitor.app"\n' +
+        'mv "Maprisma LLM Monitor.app" /Applications/\n' +
+        "# Or build from source on Apple Silicon:\n" +
+        "git clone https://github.com/maprisma/macos-llm-monitor.git\n" +
+        "cd macos-llm-monitor && ./install-mac.sh"
+    },
+    "hue-lights": {
+      repoSlug: "maprisma/macos-hue-lights",
+      version: "v0.2.0",
+      github: "https://github.com/maprisma/macos-hue-lights",
+      releases: "https://github.com/maprisma/macos-hue-lights/releases",
+      installCmd:
+        "# Download Maprisma-Hue-Lights-macOS.zip & .sha256 from GitHub Releases:\n" +
+        "shasum -a 256 -c Maprisma-Hue-Lights-macOS.zip.sha256\n" +
+        "unzip Maprisma-Hue-Lights-macOS.zip\n" +
+        'xattr -cr "Maprisma Hue Lights.app"\n' +
+        'mv "Maprisma Hue Lights.app" /Applications/\n' +
+        "# Or build from source on Apple Silicon:\n" +
+        "git clone https://github.com/maprisma/macos-hue-lights.git\n" +
+        "cd macos-hue-lights && ./install-mac.sh"
+    }
+  };
+
   function detectInitialLang() {
     const saved = localStorage.getItem("maprisma-site-lang");
     if (saved === "de" || saved === "en") return saved;
@@ -62,6 +127,9 @@
   const imGithubBtn = document.getElementById("im-github");
   const imReleaseBtn = document.getElementById("im-releases");
   const imCopyBtn = document.getElementById("im-copy");
+  const imPlatformTabs = document.getElementById("im-platform-tabs");
+  const imPlatformButtons = imPlatformTabs ? imPlatformTabs.querySelectorAll("[data-platform]") : [];
+  const installModalState = { appId: null, platform: "linux" };
 
   function t(key) {
     const dict = i18n[state.lang] || i18n.en || {};
@@ -155,6 +223,24 @@
   function getEffectiveReleasesUrl(app) {
     const live = app.repoSlug && state.ghMeta[app.repoSlug];
     return (live && live.releaseUrl) || app.releases || null;
+  }
+
+  function getMacosInfo(appId) {
+    return Object.prototype.hasOwnProperty.call(MACOS_RELEASES, appId) ? MACOS_RELEASES[appId] : null;
+  }
+
+  function getEffectiveMacosVersion(appId) {
+    const mac = getMacosInfo(appId);
+    if (!mac) return "";
+    const live = mac.repoSlug && state.ghMeta[mac.repoSlug];
+    return (live && live.version) || mac.version || "";
+  }
+
+  function getEffectiveMacosReleaseUrl(appId) {
+    const mac = getMacosInfo(appId);
+    if (!mac) return null;
+    const live = mac.repoSlug && state.ghMeta[mac.repoSlug];
+    return (live && live.releaseUrl) || mac.releases || null;
   }
 
   function getFilteredApps() {
@@ -277,6 +363,7 @@
         const ver = getEffectiveVersion(app);
         const stars = getEffectiveStars(app);
         const relUrl = getEffectiveReleasesUrl(app);
+        const macRelUrl = getEffectiveMacosReleaseUrl(app.id);
         const highlights = appText(app, "highlights") || [];
 
         return `
@@ -347,7 +434,9 @@
             </ul>
 
             <div class="card-meta-pills">
-              ${(app.desktops || []).map((d) => `<span class="desktop-pill">${escapeHtml(d)}</span>`).join("")}
+              ${(app.desktops || [])
+                .map((d) => `<span class="desktop-pill${d === "macOS" ? " macos-pill" : ""}">${escapeHtml(d)}</span>`)
+                .join("")}
               <span class="tech-pill">${escapeHtml(app.tech)}</span>
             </div>
 
@@ -364,6 +453,11 @@
               ${
                 relUrl
                   ? `<a class="btn btn-secondary" href="${escapeHtml(relUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("releasesBtn"))} ↗</a>`
+                  : ""
+              }
+              ${
+                macRelUrl
+                  ? `<a class="btn btn-secondary btn-macos" href="${escapeHtml(macRelUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("macosBtn"))} ↗</a>`
                   : ""
               }
               <a
@@ -597,27 +691,50 @@
     }
   }
 
-  function openInstallModal(appId) {
-    const app = apps.find((a) => a.id === appId);
+  function renderInstallModalContent() {
+    const app = apps.find((a) => a.id === installModalState.appId);
     if (!app) return;
-    const ver = getEffectiveVersion(app);
-    const relUrl = getEffectiveReleasesUrl(app);
+    const mac = getMacosInfo(app.id);
+    const useMacos = Boolean(mac && installModalState.platform === "macos");
 
-    imTitle.textContent = `${t("modalInstallPrefix")} ${app.name} ${ver ? `(${ver})` : ""}`.trim();
+    if (imPlatformTabs) {
+      imPlatformTabs.style.display = mac ? "inline-flex" : "none";
+      imPlatformButtons.forEach((btn) => {
+        const active = btn.dataset.platform === (useMacos ? "macos" : "linux");
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+      });
+    }
+
+    const ver = useMacos ? getEffectiveMacosVersion(app.id) : getEffectiveVersion(app);
+    const relUrl = useMacos ? getEffectiveMacosReleaseUrl(app.id) : getEffectiveReleasesUrl(app);
+    const githubUrl = useMacos ? mac.github : app.github;
+    const installCmd = useMacos ? mac.installCmd : app.installCmd;
+    const platformSuffix = useMacos ? " · macOS" : "";
+
+    imTitle.textContent = `${t("modalInstallPrefix")} ${app.name}${platformSuffix} ${ver ? `(${ver})` : ""}`.trim();
     imDesc.textContent = appText(app, "tagline");
-    imCode.textContent = app.installCmd;
+    imCode.textContent = installCmd;
     imCopyBtn.textContent = t("copyBtn");
-    imGithubBtn.href = app.github;
+    imGithubBtn.href = githubUrl;
     imGithubBtn.textContent = t("modalOpenRepo");
 
     if (relUrl) {
       imReleaseBtn.href = relUrl;
-      imReleaseBtn.textContent = t("modalDownloadRelease");
+      imReleaseBtn.textContent = useMacos ? t("modalDownloadMacosRelease") : t("modalDownloadRelease");
       imReleaseBtn.style.display = "inline-flex";
     } else {
       imReleaseBtn.style.display = "none";
     }
+  }
 
+  function openInstallModal(appId) {
+    const app = apps.find((a) => a.id === appId);
+    if (!app) return;
+    const mac = getMacosInfo(appId);
+    installModalState.appId = appId;
+    installModalState.platform = mac && state.desktop === "macOS" ? "macos" : "linux";
+    renderInstallModalContent();
     installModalEl.classList.add("open");
     installModalEl.setAttribute("aria-hidden", "false");
   }
@@ -703,6 +820,9 @@
       if (lightboxEl && lightboxEl.classList.contains("open")) {
         syncLightbox();
       }
+      if (installModalEl && installModalEl.classList.contains("open")) {
+        renderInstallModalContent();
+      }
     });
   });
 
@@ -750,6 +870,13 @@
       copyText(imCode.textContent, imCopyBtn);
     });
   }
+
+  imPlatformButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      installModalState.platform = btn.dataset.platform === "macos" ? "macos" : "linux";
+      renderInstallModalContent();
+    });
+  });
 
   document.querySelectorAll("[data-copy-target]").forEach((btn) => {
     btn.addEventListener("click", () => {

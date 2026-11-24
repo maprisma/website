@@ -1,5 +1,5 @@
 /**
- * Maprisma App Catalog & Layout Config (Managed by Netcup Control · sha256:6b7408c4e566)
+ * Maprisma App Catalog & Layout Config (Managed by Netcup Control · sha256:9d49075397fa)
  * -----------------------------------------------------------------------------------
  * Source of truth: /mnt/Data/Projects/netcup-control/state/site-control.json
  * Regenerate via: netcup-control-core apply
@@ -63,7 +63,8 @@ window.MAPRISMA_APPS = [
       "COSMIC",
       "KDE Plasma",
       "Hyprland",
-      "Linux"
+      "Linux",
+      "macOS"
     ],
     "icon": "assets/icons/maprisma.svg",
     "github": "https://github.com/maprisma/maprisma",
@@ -75,7 +76,8 @@ window.MAPRISMA_APPS = [
       "AI Project Center: plan & run projects with a team of agents, approved by you",
       "Draw-to-connect 2D/3D map with live preview & Undo",
       "Live agent activity reports & opt-in local activity log (TXT/JSON/MCP)",
-      "SHA-256 verified local LLM downloads & per-agent security check"
+      "SHA-256 verified local LLM downloads & per-agent security check",
+      "Also available for macOS (Apple Silicon)"
     ],
     "highlights_de": [
       "Neu in 2.1.5: Projekte nach Zeitplan ausführen — täglich, an gewählten Wochentagen oder alle paar Stunden, auch wenn Maprisma geschlossen ist",
@@ -83,7 +85,8 @@ window.MAPRISMA_APPS = [
       "AI Project Center: Projekte mit einem Agenten-Team planen & ausführen, mit deiner Freigabe",
       "Verbinden per Linie auf der 2D-/3D-Karte mit Vorschau & Undo",
       "Live-Aktivitätsberichte & optionales lokales Aktivitätsprotokoll (TXT/JSON/MCP)",
-      "SHA-256-geprüfte lokale LLM-Downloads & Sicherheitscheck pro Agent"
+      "SHA-256-geprüfte lokale LLM-Downloads & Sicherheitscheck pro Agent",
+      "Auch für macOS (Apple Silicon) verfügbar"
     ],
     "screenshots": [
       {
@@ -225,33 +228,34 @@ window.MAPRISMA_APPS = [
     "name": "Maprisma LLM Monitor",
     "version": "v0.2.0",
     "repoSlug": "maprisma/llm-monitor",
-    "tagline": "Live GPU VRAM, context fill & tok/s panel applet for local LLMs",
-    "tagline_de": "GPU-Speicher, Kontext-Füllstand & Tok/s lokaler LLMs direkt in der Leiste",
-    "description": "See at a glance from your desktop bar when llama.cpp, Ollama, LM Studio, or vLLM is holding GPU memory, how full its context window is (green-to-red bar), live tokens/sec, which agent is using it, and free GPU VRAM with a single click.",
-    "description_de": "Sieh auf einen Blick in der Leiste, wann llama.cpp, Ollama, LM Studio oder vLLM Grafikkartenspeicher belegen, wie voll das Kontextfenster ist (Grün-bis-Rot-Balken), wie schnell Tokens generiert werden, welcher Agent das Modell nutzt — plus 1-Klick-VRAM-Freigabe.",
+    "tagline": "Live GPU/unified memory, context fill & tok/s monitor for local LLMs",
+    "tagline_de": "GPU-/Unified-Memory, Kontext-Füllstand & Tok/s lokaler LLMs in Leiste & Menüleiste",
+    "description": "See at a glance from your Linux panel or macOS menu bar when llama.cpp, Ollama, LM Studio, or vLLM is holding GPU/unified memory, how full its context window is (green-to-red bar), live tokens/sec, which agent is using it, and free memory with a single click.",
+    "description_de": "Sieh auf einen Blick in deiner Linux-Leiste oder macOS-Menüleiste, wann llama.cpp, Ollama, LM Studio oder vLLM GPU- bzw. Unified-Memory belegen, wie voll das Kontextfenster ist (Grün-bis-Rot-Balken), wie schnell Tokens generiert werden, welcher Agent das Modell nutzt — plus 1-Klick-Speicherfreigabe.",
     "category": "monitors",
     "categoryLabel": "Panel Monitors",
     "categoryLabel_de": "Panel-Monitore",
     "featured": false,
-    "tech": "Rust (libcosmic) · Python",
+    "tech": "Rust (libcosmic) · SwiftUI · Python",
     "desktops": [
       "COSMIC",
       "KDE Plasma",
-      "Hyprland"
+      "Hyprland",
+      "macOS"
     ],
     "icon": "assets/icons/llm.svg",
     "github": "https://github.com/maprisma/llm-monitor",
     "releases": null,
     "installCmd": "git clone https://github.com/maprisma/llm-monitor.git maprisma-llm-monitor\ncd maprisma-llm-monitor\n./install.sh",
     "highlights": [
-      "Live VRAM split: LLM vs. desktop vs. free memory",
-      "Context & output buffer fill + live tok/s",
-      "One-click Free GPU Memory action"
+      "Live VRAM / unified memory split: LLM vs. desktop vs. free memory",
+      "Context & output buffer fill + live tok/s + one-click memory unload",
+      "Available for Linux panels & native macOS (Apple Silicon) menu bar"
     ],
     "highlights_de": [
-      "VRAM-Aufteilung: Modelle vs. Desktop vs. frei",
-      "Kontext-Füllstand & Live-Geschwindigkeit in Tok/s",
-      "GPU-Speicher mit einem Klick freigeben"
+      "VRAM- & Unified-Memory-Aufteilung: Modelle vs. System vs. frei",
+      "Kontext-Füllstand, Live-Tok/s & 1-Klick-Speicherfreigabe",
+      "Für Linux-Panels & native macOS-Menüleiste (Apple Silicon)"
     ],
     "screenshots": [
       {
@@ -312,19 +316,20 @@ window.MAPRISMA_APPS = [
     "name": "Maprisma Hue Lights",
     "version": "v0.2.0",
     "repoSlug": "maprisma/hue-lights",
-    "tagline": "Local-only Philips Hue rooms, zones, dimmers & scenes in the panel",
-    "tagline_de": "Philips Hue Räume, Zonen, Dimmer & Szenen lokal aus der Leiste steuern",
-    "description": "Control Philips Hue rooms, zones, individual bulbs, and scenes straight from a native panel applet or tray menu. Communicates strictly over local HTTPS with pinned bridge certificates — zero cloud account required, translated into 8 languages.",
-    "description_de": "Steuere Philips-Hue-Räume, Zonen, einzelne Lampen und Szenen direkt über dein Panel oder Tray. Kommuniziert ausschließlich lokal per HTTPS mit deiner Hue Bridge — komplett ohne Cloud-Konto und in 8 Sprachen übersetzt.",
+    "tagline": "Local-only Philips Hue rooms, zones, dimmers & scenes in panel & menu bar",
+    "tagline_de": "Philips Hue Räume, Zonen, Dimmer & Szenen lokal aus Leiste & Menüleiste",
+    "description": "Control Philips Hue rooms, zones, individual bulbs, and scenes straight from a Linux panel applet/tray or native macOS (Apple Silicon) menu bar app. Communicates strictly over local HTTPS with pinned bridge certificates — zero cloud account required, translated into 8 languages.",
+    "description_de": "Steuere Philips-Hue-Räume, Zonen, einzelne Lampen und Szenen direkt über dein Linux-Panel/Tray oder die native macOS-Menüleisten-App (Apple Silicon). Kommuniziert ausschließlich lokal per HTTPS mit deiner Hue Bridge — komplett ohne Cloud-Konto und in 8 Sprachen übersetzt.",
     "category": "monitors",
     "categoryLabel": "Panel Monitors",
     "categoryLabel_de": "Panel-Monitore",
     "featured": false,
-    "tech": "Rust (libcosmic) · Python",
+    "tech": "Rust (libcosmic) · SwiftUI · Python",
     "desktops": [
       "COSMIC",
       "KDE Plasma",
-      "Hyprland"
+      "Hyprland",
+      "macOS"
     ],
     "icon": "assets/icons/hue.svg",
     "github": "https://github.com/maprisma/hue-lights",
@@ -332,13 +337,13 @@ window.MAPRISMA_APPS = [
     "installCmd": "git clone https://github.com/maprisma/hue-lights.git maprisma-hue-lights\ncd maprisma-hue-lights\n./install.sh",
     "highlights": [
       "Room & zone cards glowing in their live light color",
-      "Right-click panel bulb to switch all lights off",
-      "100% local HTTPS to bridge · 8 UI languages"
+      "100% local HTTPS to bridge · 8 UI languages",
+      "Available for Linux panels & native macOS (Apple Silicon) menu bar"
     ],
     "highlights_de": [
       "Raum- & Zonenkarten leuchten in ihrer aktuellen Lichtfarbe",
-      "Rechtsklick auf das Icon schaltet alle Lichter aus",
-      "100 % lokal über deine Bridge · 8 Oberflächensprachen"
+      "100 % lokal über deine Bridge · 8 Oberflächensprachen",
+      "Für Linux-Panels & native macOS-Menüleiste (Apple Silicon)"
     ],
     "screenshots": [
       {
@@ -356,12 +361,12 @@ window.MAPRISMA_APPS = [
   {
     "id": "settings",
     "name": "Maprisma Settings",
-    "version": "v0.5.1",
+    "version": "v0.6.0",
     "repoSlug": "maprisma/settings",
-    "tagline": "Install, update, remove Maprisma apps & place their bar icons",
-    "tagline_de": "Maprisma-Apps installieren, aktualisieren, entfernen & Leisten-Icons platzieren",
-    "description": "The central app manager and control hub for the Maprisma family. Install, update, and cleanly remove any Maprisma app, place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications.",
-    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps. Installiere, aktualisiere und entferne Maprisma-Anwendungen sauber per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen.",
+    "tagline": "Install, update, remove Maprisma & system apps and place bar icons",
+    "tagline_de": "Maprisma- & System-Apps installieren, aktualisieren, entfernen & Leisten-Icons platzieren",
+    "description": "The central app manager and control hub for the Maprisma family and your installed Linux apps. Manage all installed non-Maprisma apps on the new top Apps page, install, update, and cleanly remove any Maprisma app, place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications.",
+    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps und deine installierten Linux-Programme. Verwalte alle installierten Nicht-Maprisma-Apps auf der neuen Apps-Seite ganz oben, installiere, aktualisiere und entferne Maprisma-Anwendungen per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen.",
     "category": "desktop",
     "categoryLabel": "Desktop Apps",
     "categoryLabel_de": "Desktop-Apps",
@@ -378,14 +383,14 @@ window.MAPRISMA_APPS = [
     "releases": "https://github.com/maprisma/settings/releases",
     "installCmd": "# AppImage from GitHub Releases (github.com/maprisma/settings/releases):\nsha256sum -c Maprisma-Settings-*-x86_64.AppImage.sha256\nchmod +x Maprisma-Settings-*-x86_64.AppImage\n./Maprisma-Settings-*-x86_64.AppImage\n# Or from source, with bar icon and desktop integration:\ngit clone https://github.com/maprisma/settings.git maprisma-settings\ncd maprisma-settings\n./tools/install-local",
     "highlights": [
-      "One-click install & atomic updates across 18 apps",
-      "Panel & system tray icon placement",
-      "Shared Ask AI safety rules & action audit log"
+      "New in 0.6.0: top Apps page to launch, update, and remove installed non-Maprisma apps",
+      "One-click install & atomic updates across 18 Maprisma apps",
+      "Panel & system tray icon placement + shared Ask AI safety rules"
     ],
     "highlights_de": [
-      "1-Klick-Installation & atomare Updates für 18 Apps",
-      "Leisten- und System-Tray-Icons direkt platzieren",
-      "Gemeinsame Ask-AI-Sicherheitsregeln & Aktionsprotokoll"
+      "Neu in 0.6.0: neue Apps-Seite ganz oben zum Starten, Aktualisieren & Entfernen installierter Nicht-Maprisma-Apps",
+      "1-Klick-Installation & atomare Updates für 18 Maprisma-Apps",
+      "Leisten- und System-Tray-Icons + gemeinsame Ask-AI-Sicherheitsregeln"
     ],
     "screenshots": [
       {
@@ -509,6 +514,48 @@ window.MAPRISMA_APPS = [
         "src": "assets/screenshots/playground-generate.webp",
         "caption": "100% local text-to-image generation on your GPU with SHA-256 verified weights",
         "caption_de": "100 % lokale Bildgenerierung auf deiner Grafikkarte mit SHA-256-geprüften Modellen"
+      }
+    ]
+  },
+  {
+    "id": "dictation",
+    "name": "Maprisma Dictation",
+    "version": "v0.1.0",
+    "repoSlug": "maprisma/dictation",
+    "tagline": "Local Whisper voice dictation & top-center AI voice overlay for Linux & macOS",
+    "tagline_de": "Lokale Whisper-Spracheingabe & KI-Sprach-Overlay für Linux & macOS",
+    "description": "Local GPU-accelerated voice dictation and a sleek top-center aura pill overlay. On Linux it provides one shared D-Bus voice service (`com.maprisma.Voice1`) via whisper.cpp + Vulkan; on macOS (Apple Silicon) it ships as a native SwiftUI menu bar app with whisper.cpp Metal, Option+Space hotkey, auto-paste, and safe desktop commands in 8 languages.",
+    "description_de": "Lokale GPU-beschleunigte Spracheingabe mit schwebendem Aura-Overlay am oberen Bildschirmrand. Unter Linux als gemeinsamer D-Bus-Sprachdienst (`com.maprisma.Voice1`) mit whisper.cpp + Vulkan; unter macOS (Apple Silicon) als native SwiftUI-Menüleisten-App mit whisper.cpp Metal, Option+Leertaste-Kürzel, Auto-Einfügen und sicheren Sprachbefehlen in 8 Sprachen.",
+    "category": "ai",
+    "categoryLabel": "AI & Voice",
+    "categoryLabel_de": "KI & Sprache",
+    "featured": false,
+    "tech": "Rust · SwiftUI · whisper.cpp",
+    "desktops": [
+      "COSMIC",
+      "KDE Plasma",
+      "Hyprland",
+      "macOS"
+    ],
+    "icon": "assets/icons/dictation.svg",
+    "github": "https://github.com/maprisma/dictation",
+    "releases": null,
+    "installCmd": "git clone https://github.com/maprisma/dictation.git maprisma-dictation\ncd maprisma-dictation\n./install.sh",
+    "highlights": [
+      "Offline GPU speech-to-text via whisper.cpp (Vulkan on Linux, Metal on macOS)",
+      "Floating aura overlay with global shortcut, VAD auto-stop & AI helper answers",
+      "Native macOS (Apple Silicon) menu bar app & 8 UI languages"
+    ],
+    "highlights_de": [
+      "Offline-Spracherkennung auf der GPU via whisper.cpp (Vulkan unter Linux, Metal auf macOS)",
+      "Schwebendes Aura-Overlay mit globalem Kürzel, VAD-Auto-Stopp & KI-Antworten",
+      "Native macOS-Menüleisten-App (Apple Silicon) & 8 Oberflächensprachen"
+    ],
+    "screenshots": [
+      {
+        "src": "assets/screenshots/dictation-preview.svg",
+        "caption": "Top-center aura voice pill and session D-Bus voice service",
+        "caption_de": "Schwebendes Sprach-Overlay mit Aura-Ring und lokalem D-Bus-Sprachdienst"
       }
     ]
   },

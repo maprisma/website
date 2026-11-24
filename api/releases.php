@@ -97,6 +97,7 @@ $defaultSlugs = [
     'maprisma/settings',
     'maprisma/launcher',
     'maprisma/playground',
+    'maprisma/dictation',
     'maprisma/notifier',
     'maprisma/shell',
     'maprisma/icons',
