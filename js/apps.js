@@ -314,12 +314,12 @@ window.MAPRISMA_APPS = [
   {
     "id": "hue-lights",
     "name": "Maprisma Hue Lights",
-    "version": "v0.2.0",
+    "version": "v0.3.0",
     "repoSlug": "maprisma/hue-lights",
-    "tagline": "Local-only Philips Hue rooms, zones, dimmers & scenes in panel & menu bar",
-    "tagline_de": "Philips Hue Räume, Zonen, Dimmer & Szenen lokal aus Leiste & Menüleiste",
-    "description": "Control Philips Hue rooms, zones, individual bulbs, and scenes straight from a Linux panel applet/tray or native macOS (Apple Silicon) menu bar app. Communicates strictly over local HTTPS with pinned bridge certificates — zero cloud account required, translated into 8 languages.",
-    "description_de": "Steuere Philips-Hue-Räume, Zonen, einzelne Lampen und Szenen direkt über dein Linux-Panel/Tray oder die native macOS-Menüleisten-App (Apple Silicon). Kommuniziert ausschließlich lokal per HTTPS mit deiner Hue Bridge — komplett ohne Cloud-Konto und in 8 Sprachen übersetzt.",
+    "tagline": "Local Philips Hue rooms, Light Themes, schedules, linked rules & Audio Light Synth",
+    "tagline_de": "Philips Hue lokal: Räume, Licht-Themen, Zeitpläne, Regeln & Audio-Licht-Synth",
+    "description": "Control Philips Hue rooms, zones, color, Kelvin warmth, native CLIP v2 effects, per-lamp Light Themes, Bridge or local schedules, linked-light rules, and a real-time Audio-Reactive Light Synthesizer from COSMIC, KDE Plasma, Hyprland, or macOS. Communicates strictly over local pinned HTTPS with live SSE — zero cloud account, 6 fun skins, 8 panel icons, saved window size & position, and 8 languages.",
+    "description_de": "Steuere Philips-Hue-Räume, Zonen, Farbe, Kelvin-Wärme, native Effekte, Licht-Themen pro Lampe, Bridge- oder lokale Zeitpläne, Lampen-Regeln und einen Echtzeit-Audio-Licht-Synthesizer unter COSMIC, KDE Plasma, Hyprland oder macOS. Kommuniziert streng lokal per gepinntem HTTPS & Live-SSE — ohne Cloud-Konto, mit 6 Skins, 8 Panel-Icons, gespeicherter Fenstergröße/-position und 8 Sprachen.",
     "category": "monitors",
     "categoryLabel": "Panel Monitors",
     "categoryLabel_de": "Panel-Monitore",
@@ -336,25 +336,25 @@ window.MAPRISMA_APPS = [
     "releases": null,
     "installCmd": "git clone https://github.com/maprisma/hue-lights.git maprisma-hue-lights\ncd maprisma-hue-lights\n./install.sh",
     "highlights": [
-      "Room & zone cards glowing in their live light color",
-      "100% local HTTPS to bridge · 8 UI languages",
-      "Available for Linux panels & native macOS (Apple Silicon) menu bar"
+      "Live CLIP v2 SSE, All On/Off with exclusions, Favorites, color, warmth, effects & Light Themes",
+      "Bridge or local schedules, linked-light rules & real-time Audio Light Synthesizer",
+      "6 fun skins, 8 panel icons, saved window size & screen position · 8 UI languages"
     ],
     "highlights_de": [
-      "Raum- & Zonenkarten leuchten in ihrer aktuellen Lichtfarbe",
-      "100 % lokal über deine Bridge · 8 Oberflächensprachen",
-      "Für Linux-Panels & native macOS-Menüleiste (Apple Silicon)"
+      "Live-CLIP-v2-SSE, Alle Ein/Aus mit Ausnahmen, Favoriten, Farbe, Wärme, Effekte & Licht-Themen",
+      "Bridge- oder lokale Zeitpläne, Lampen-Regeln & Echtzeit-Audio-Licht-Synthesizer",
+      "6 Skins, 8 Panel-Icons, gespeicherte Fenstergröße & -position · 8 Oberflächensprachen"
     ],
     "screenshots": [
       {
         "src": "assets/screenshots/hue-rooms.webp",
-        "caption": "Room and zone brightness cards with live status count",
-        "caption_de": "Raum- und Zonenkarten mit Helligkeitsreglern und Live-Status"
+        "caption": "Resizable 2-column desktop window with Favorites, filters, and 4 tabs (Lights, Schedules, Rules, Synth)",
+        "caption_de": "Skalierbares 2-Spalten-Fenster mit Favoriten, Filtern und 4 Tabs (Lichter, Zeitpläne, Regeln, Synth)"
       },
       {
         "src": "assets/screenshots/hue-scenes.webp",
-        "caption": "Expanded room card with individual light sliders and one-click scenes",
-        "caption_de": "Aufgeklappter Raum mit Einzellampen und Szenenauswahl"
+        "caption": "Maprisma Hue Lights v0.3.0 overview across desktop window and compact panel popup",
+        "caption_de": "Maprisma Hue Lights v0.3.0 im Desktop-Fenster und kompakten Panel-Popup"
       }
     ]
   },
