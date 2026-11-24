@@ -93,7 +93,6 @@ $defaultSlugs = [
     'maprisma/wlan-monitor',
     'maprisma/llm-monitor',
     'maprisma/bluetooth-monitor',
-    'maprisma/hue-lights',
     'maprisma/settings',
     'maprisma/launcher',
     'maprisma/playground',

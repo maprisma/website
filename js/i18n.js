@@ -16,8 +16,8 @@ window.MAPRISMA_I18N = {
     heroTitleLead: "Your AI agents, local models & desktop tools — ",
     heroTitleAccent: "crafted as one family.",
     heroLead:
-      "<strong>Maprisma</strong> brings local-first AI workflows and native desktop utilities together on Linux — with native <strong>macOS (Apple Silicon)</strong> ports for Maprisma, Dictation, LLM Monitor, and Hue Lights. Every app respects your privacy and installs straight from GitHub.",
-    ctaBrowse: "Browse All 14 Apps",
+      "<strong>Maprisma</strong> brings local-first AI workflows and native desktop utilities together on Linux — with native <strong>macOS (Apple Silicon)</strong> ports for Maprisma, Dictation, and LLM Monitor. Every app respects your privacy and installs straight from GitHub.",
+    ctaBrowse: "Browse All 13 Apps",
     ctaReleases: "Download Maprisma Releases",
     ctaInstall: "How to Install",
     statAppsLabel: "Apps, Applets & Add-ons",
@@ -58,7 +58,7 @@ window.MAPRISMA_I18N = {
 
     installHeading: "Download & Install from GitHub",
     installSubheading:
-      'Every Maprisma app lives in the <a href="https://github.com/maprisma" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">github.com/maprisma</a> organization. On Linux, download AppImages or archives, manage everything via <strong>Maprisma Settings</strong>, or run local installers — and on <strong>macOS (Apple Silicon)</strong>, grab signed arm64 <code>.zip</code> releases for Maprisma, Dictation, LLM Monitor, and Hue Lights.',
+      'Every Maprisma app lives in the <a href="https://github.com/maprisma" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">github.com/maprisma</a> organization. On Linux, download AppImages or archives, manage everything via <strong>Maprisma Settings</strong>, or run local installers — and on <strong>macOS (Apple Silicon)</strong>, grab signed arm64 <code>.zip</code> releases for Maprisma, Dictation, and LLM Monitor.',
     step1Title: "AppImage or Release Archive",
     step1Desc:
       "Maprisma, Maprisma Settings, Theme, Launcher and Playground have a portable <code>x86_64</code> AppImage and a release archive on each app's GitHub Releases page. Check the SHA-256 checksum, make the AppImage executable and start it. For Maprisma the archive is recommended (background local LLM service). Panel applets, tray icons and the shell are installed from source (step 3).",
@@ -70,7 +70,7 @@ window.MAPRISMA_I18N = {
       "Every Rust panel applet and Flutter app includes an idempotent installer (<code>./install.sh</code> or <code>./tools/install-local</code>) that installs cleanly into <code>~/.local</code> without touching system files.",
     step4Title: "macOS (Apple Silicon) Apps",
     step4Desc:
-      "Native <code>arm64</code> macOS 13+ releases are available for <strong>Maprisma</strong>, <strong>Dictation</strong>, <strong>LLM Monitor</strong>, and <strong>Hue Lights</strong>. Verify the SHA-256 checksum, unzip, clear the download quarantine flag (ad-hoc signed CI builds), and move the <code>.app</code> to <code>/Applications</code> — or build locally with <code>./install-mac.sh</code>.",
+      "Native <code>arm64</code> macOS 13+ releases are available for <strong>Maprisma</strong>, <strong>Dictation</strong>, and <strong>LLM Monitor</strong>. Verify the SHA-256 checksum, unzip, clear the download quarantine flag (ad-hoc signed CI builds), and move the <code>.app</code> to <code>/Applications</code> — or build locally with <code>./install-mac.sh</code>.",
 
     copyBtn: "Copy",
     copiedBtn: "Copied ✓",
@@ -102,8 +102,8 @@ window.MAPRISMA_I18N = {
     heroTitleLead: "Deine KI-Agenten, lokalen Modelle & Desktop-Tools — ",
     heroTitleAccent: "vereint in einer Familie.",
     heroLead:
-      "<strong>Maprisma</strong> verbindet lokale KI-Workflows und native Desktop-Werkzeuge unter Linux — plus native <strong>macOS-Versionen (Apple Silicon)</strong> für Maprisma, Dictation, LLM Monitor und Hue Lights. Jede App schützt deine Privatsphäre und lässt sich direkt von GitHub installieren.",
-    ctaBrowse: "Alle 14 Apps entdecken",
+      "<strong>Maprisma</strong> verbindet lokale KI-Workflows und native Desktop-Werkzeuge unter Linux — plus native <strong>macOS-Versionen (Apple Silicon)</strong> für Maprisma, Dictation und LLM Monitor. Jede App schützt deine Privatsphäre und lässt sich direkt von GitHub installieren.",
+    ctaBrowse: "Alle 13 Apps entdecken",
     ctaReleases: "Maprisma Releases laden",
     ctaInstall: "Installationsanleitung",
     statAppsLabel: "Apps, Applets & Add-ons",
@@ -144,7 +144,7 @@ window.MAPRISMA_I18N = {
 
     installHeading: "Download & Installation von GitHub",
     installSubheading:
-      'Alle Maprisma-Apps sind unter <a href="https://github.com/maprisma" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">github.com/maprisma</a> verfügbar. Unter Linux gibt es AppImages, Archive, <strong>Maprisma Settings</strong> und lokale Skripte — und für <strong>macOS (Apple Silicon)</strong> fertige arm64-<code>.zip</code>-Releases für Maprisma, Dictation, LLM Monitor und Hue Lights.',
+      'Alle Maprisma-Apps sind unter <a href="https://github.com/maprisma" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">github.com/maprisma</a> verfügbar. Unter Linux gibt es AppImages, Archive, <strong>Maprisma Settings</strong> und lokale Skripte — und für <strong>macOS (Apple Silicon)</strong> fertige arm64-<code>.zip</code>-Releases für Maprisma, Dictation und LLM Monitor.',
     step1Title: "AppImage oder Release-Archiv",
     step1Desc:
       "Maprisma, Maprisma Settings, Theme, Launcher und Playground gibt es als portables <code>x86_64</code>-AppImage und als Release-Archiv auf der GitHub-Releases-Seite der jeweiligen App. Prüfe die SHA-256-Prüfsumme, mach das AppImage ausführbar und starte es. Für Maprisma wird das Archiv empfohlen (lokaler LLM-Hintergrunddienst). Panel-Applets, Tray-Icons und die Shell werden aus dem Quellcode installiert (Schritt 3).",
@@ -156,7 +156,7 @@ window.MAPRISMA_I18N = {
       "Jedes Rust-Panel-Applet und jede Flutter-App bringt ein sauberes Installationsskript (<code>./install.sh</code> bzw. <code>./tools/install-local</code>) für <code>~/.local</code> mit — ohne Systemdateien zu verändern.",
     step4Title: "macOS-Apps (Apple Silicon)",
     step4Desc:
-      "Native <code>arm64</code>-Releases für macOS 13+ gibt es für <strong>Maprisma</strong>, <strong>Dictation</strong>, <strong>LLM Monitor</strong> und <strong>Hue Lights</strong>. Prüfe die SHA-256-Prüfsumme, entpacke das Archiv, entferne das Download-Quarantäne-Flag (Ad-hoc-signierter CI-Build) und schiebe die <code>.app</code> nach <code>/Applications</code> — oder baue lokal per <code>./install-mac.sh</code>.",
+      "Native <code>arm64</code>-Releases für macOS 13+ gibt es für <strong>Maprisma</strong>, <strong>Dictation</strong> und <strong>LLM Monitor</strong>. Prüfe die SHA-256-Prüfsumme, entpacke das Archiv, entferne das Download-Quarantäne-Flag (Ad-hoc-signierter CI-Build) und schiebe die <code>.app</code> nach <code>/Applications</code> — oder baue lokal per <code>./install-mac.sh</code>.",
 
     copyBtn: "Kopieren",
     copiedBtn: "Kopiert ✓",

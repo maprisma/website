@@ -312,58 +312,6 @@ window.MAPRISMA_APPS = [
     ]
   },
   {
-    "id": "hue-lights",
-    "name": "Maprisma Hue Lights",
-    "version": "v0.4.0",
-    "repoSlug": "maprisma/hue-lights",
-    "tagline": "Visual Philips Hue Floorplan Studio, Light Themes, schedules, wired rules & Audio Light Synth",
-    "tagline_de": "Philips-Hue-Grundriss-Studio, Licht-Themen, Zeitpläne, Regeln & Audio-Licht-Synth",
-    "description": "Design an interactive 2D Floorplan Studio for your Philips Hue home — start from 6 editable house/apartment prototypes or your own custom blueprint background, place lamps with 12 selectable icons, draw resizable rooms & zones with scenes and scene schedules, connect typed dependency wires, and sync everything (including Entertainment Areas) to your Bridge in 1 click. Plus per-lamp Light Themes, Bridge/local schedules, real-time Audio-Reactive Light Synthesizer, 6 skins, 8 panel icons, and 8 languages over local pinned HTTPS.",
-    "description_de": "Gestalte ein interaktives 2D-Grundriss-Studio für dein Philips-Hue-Zuhause — starte mit 6 bearbeitbaren Wohnungs-/Haus-Vorlagen oder einem eigenen Grundriss-Bild, platziere Lampen mit 12 wählbaren Icons, zeichne skalierbare Räume & Zonen inklusive Szenen und Szenen-Zeitplänen, verbinde Abhängigkeiten per Leitung und synchronisiere alles (inkl. Entertainment-Bereiche) per 1-Klick mit der Hue Bridge. Dazu Licht-Themen pro Lampe, Bridge-/lokale Zeitpläne, Echtzeit-Audio-Licht-Synthesizer, 6 Skins, 8 Panel-Icons und 8 Sprachen — 100 % lokal per gepinntem HTTPS.",
-    "category": "monitors",
-    "categoryLabel": "Panel Monitors",
-    "categoryLabel_de": "Panel-Monitore",
-    "featured": false,
-    "tech": "Rust (libcosmic) · SwiftUI · Python",
-    "desktops": [
-      "COSMIC",
-      "KDE Plasma",
-      "Hyprland",
-      "macOS"
-    ],
-    "icon": "assets/icons/hue.svg",
-    "github": "https://github.com/maprisma/hue-lights",
-    "releases": "https://github.com/maprisma/hue-lights/releases",
-    "installCmd": "git clone https://github.com/maprisma/hue-lights.git maprisma-hue-lights\ncd maprisma-hue-lights\n./install.sh",
-    "highlights": [
-      "Visual Floorplan Map Studio: 6 editable prototypes, custom background, 12 lamp icons, resizable rooms, dependency wires & 1-click Bridge sync",
-      "Room scenes & ⏰ scene scheduling, per-lamp Light Themes, Bridge or local schedules & live Audio Light Synthesizer",
-      "Local pinned HTTPS & live CLIP v2 SSE · 6 skins, 8 panel icons, saved window size/position & 8 UI languages"
-    ],
-    "highlights_de": [
-      "Visuelles Grundriss-Studio: 6 bearbeitbare Vorlagen, eigenes Hintergrundbild, 12 Lampen-Icons, skalierbare Räume, Abhängigkeits-Linien & 1-Klick-Bridge-Sync",
-      "Raumszenen & ⏰ Szenen-Zeitpläne, Licht-Themen pro Lampe, Bridge-/lokale Zeitpläne & Live-Audio-Licht-Synthesizer",
-      "Lokal per gepinntem HTTPS & Live-CLIP-v2-SSE · 6 Skins, 8 Panel-Icons, gespeicherte Fenstergröße/-position & 8 Sprachen"
-    ],
-    "screenshots": [
-      {
-        "src": "assets/screenshots/hue-map.webp",
-        "caption": "Interactive Visual Floorplan Studio with 6 prototypes, 12 lamp icons, resizable room boxes, typed dependency wires, and 1-click Bridge sync",
-        "caption_de": "Interaktives Grundriss-Studio mit 6 Vorlagen, 12 Lampen-Icons, skalierbaren Raumboxen, Abhängigkeits-Linien und 1-Klick-Bridge-Sync"
-      },
-      {
-        "src": "assets/screenshots/hue-rooms.webp",
-        "caption": "Rooms, Favorites, filters, and 5 studio tabs (Lights, Map, Schedules, Rules, Synth)",
-        "caption_de": "Räume, Favoriten, Filter und 5 Studio-Tabs (Lichter, Karte, Zeitpläne, Regeln, Synth)"
-      },
-      {
-        "src": "assets/screenshots/hue-scenes.webp",
-        "caption": "Maprisma Hue Lights overview pairing the Visual Floorplan Studio and Rooms view",
-        "caption_de": "Maprisma Hue Lights im Überblick mit Grundriss-Studio und Raumansicht"
-      }
-    ]
-  },
-  {
     "id": "settings",
     "name": "Maprisma Settings",
     "version": "v0.6.0",
