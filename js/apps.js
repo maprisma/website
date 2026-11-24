@@ -314,7 +314,7 @@ window.MAPRISMA_APPS = [
   {
     "id": "hue-lights",
     "name": "Maprisma Hue Lights",
-    "version": "v0.3.0",
+    "version": "v0.4.0",
     "repoSlug": "maprisma/hue-lights",
     "tagline": "Visual Philips Hue Floorplan Studio, Light Themes, schedules, wired rules & Audio Light Synth",
     "tagline_de": "Philips-Hue-Grundriss-Studio, Licht-Themen, Zeitpläne, Regeln & Audio-Licht-Synth",
@@ -333,7 +333,7 @@ window.MAPRISMA_APPS = [
     ],
     "icon": "assets/icons/hue.svg",
     "github": "https://github.com/maprisma/hue-lights",
-    "releases": null,
+    "releases": "https://github.com/maprisma/hue-lights/releases",
     "installCmd": "git clone https://github.com/maprisma/hue-lights.git maprisma-hue-lights\ncd maprisma-hue-lights\n./install.sh",
     "highlights": [
       "Visual Floorplan Map Studio: 6 editable prototypes, custom background, 12 lamp icons, resizable rooms, dependency wires & 1-click Bridge sync",
