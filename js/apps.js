@@ -312,14 +312,66 @@ window.MAPRISMA_APPS = [
     ]
   },
   {
+    "id": "hue-lights",
+    "name": "Maprisma Lights",
+    "version": "v0.5.0",
+    "repoSlug": "maprisma/hue-lights",
+    "tagline": "Multi-brand local smart lighting, Floorplan Studio v2, schedules, wired rules & Audio Light Synth",
+    "tagline_de": "Markenübergreifende lokale Lichtsteuerung, Grundriss-Studio v2, Zeitpläne, Regeln & Audio-Licht-Synth",
+    "description": "Control Philips Hue Bridges alongside local Home Assistant, WLED, WiZ, LIFX, Govee LAN, Nanoleaf, Shelly, and IKEA DIRIGERA lights in one local-first studio — 100% free and open source on Linux and macOS. Design multi-floor 2D Floorplan Studio layouts with polygon rooms, 12 lamp icons, lighting planner, typed dependency wires, 1-click Bridge sync, schedules, visual rules, Audio-Reactive Light Synthesizer, and 8 languages.",
+    "description_de": "Steuere Philips Hue Bridges zusammen mit lokalem Home Assistant, WLED, WiZ, LIFX, Govee LAN, Nanoleaf, Shelly und IKEA DIRIGERA in einem lokalen Studio — 100 % kostenlos und Open Source für Linux und macOS. Gestalte mehrstöckige 2D-Grundrisse mit Polygon-Räumen, 12 Lampen-Icons, Lichtplaner, Abhängigkeits-Leitungen, 1-Klick-Bridge-Sync, Zeitplänen, visuellen Regeln, Echtzeit-Audio-Licht-Synthesizer und 8 Sprachen.",
+    "category": "monitors",
+    "categoryLabel": "Panel Monitors",
+    "categoryLabel_de": "Panel-Monitore",
+    "featured": false,
+    "tech": "Rust (libcosmic) · SwiftUI · Python",
+    "desktops": [
+      "COSMIC",
+      "KDE Plasma",
+      "Hyprland",
+      "macOS"
+    ],
+    "icon": "assets/icons/hue.svg",
+    "github": "https://github.com/maprisma/hue-lights",
+    "releases": "https://github.com/maprisma/hue-lights/releases",
+    "installCmd": "git clone https://github.com/maprisma/hue-lights.git maprisma-hue-lights\ncd maprisma-hue-lights\n./install.sh",
+    "highlights": [
+      "Multi-brand local control: Philips Hue, Home Assistant, WLED, WiZ, LIFX, Govee LAN, Nanoleaf, Shelly & IKEA DIRIGERA",
+      "Floorplan Studio v2: polygon rooms, multi-floor layouts, lighting planner, dependency wires & 1-click Bridge sync",
+      "Native Linux panel/tray app & SwiftUI macOS (Apple Silicon) app — 100% local & free in 8 languages"
+    ],
+    "highlights_de": [
+      "Markenübergreifend lokal: Philips Hue, Home Assistant, WLED, WiZ, LIFX, Govee LAN, Nanoleaf, Shelly & IKEA DIRIGERA",
+      "Grundriss-Studio v2: Polygon-Räume, mehrere Etagen, Lichtplaner, Abhängigkeits-Linien & 1-Klick-Bridge-Sync",
+      "Native Linux-Panel-/Tray-App & SwiftUI-App für macOS (Apple Silicon) — 100 % lokal & kostenlos in 8 Sprachen"
+    ],
+    "screenshots": [
+      {
+        "src": "assets/screenshots/hue-map.webp",
+        "caption": "Interactive Floorplan Studio with polygon rooms, 12 lamp icons, typed dependency wires, and 1-click Bridge sync",
+        "caption_de": "Interaktives Grundriss-Studio mit Polygon-Räumen, 12 Lampen-Icons, Abhängigkeits-Linien und 1-Klick-Bridge-Sync"
+      },
+      {
+        "src": "assets/screenshots/hue-rooms.webp",
+        "caption": "Rooms, Favorites, filters, and 5 studio tabs (Lights, Map, Schedules, Rules, Synth)",
+        "caption_de": "Räume, Favoriten, Filter und 5 Studio-Tabs (Lichter, Karte, Zeitpläne, Regeln, Synth)"
+      },
+      {
+        "src": "assets/screenshots/hue-scenes.webp",
+        "caption": "Maprisma Lights overview pairing the Floorplan Studio and Rooms view",
+        "caption_de": "Maprisma Lights im Überblick mit Grundriss-Studio und Raumansicht"
+      }
+    ]
+  },
+  {
     "id": "settings",
     "name": "Maprisma Settings",
-    "version": "v0.6.0",
+    "version": "v0.6.1",
     "repoSlug": "maprisma/settings",
     "tagline": "Install, update, remove Maprisma & system apps and place bar icons",
     "tagline_de": "Maprisma- & System-Apps installieren, aktualisieren, entfernen & Leisten-Icons platzieren",
-    "description": "The central app manager and control hub for the Maprisma family and your installed Linux apps. Manage all installed non-Maprisma apps on the new top Apps page, install, update, and cleanly remove any Maprisma app, place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications.",
-    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps und deine installierten Linux-Programme. Verwalte alle installierten Nicht-Maprisma-Apps auf der neuen Apps-Seite ganz oben, installiere, aktualisiere und entferne Maprisma-Anwendungen per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen.",
+    "description": "The central app manager and control hub for the Maprisma family and your installed Linux apps. Manage all installed non-Maprisma apps on the top Apps page, install, update, and cleanly remove any Maprisma app (including Maprisma Clipboard and Maprisma Lights), place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications.",
+    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps und deine installierten Linux-Programme. Verwalte alle installierten Nicht-Maprisma-Apps auf der Apps-Seite ganz oben, installiere, aktualisiere und entferne jede Maprisma-App (inkl. Maprisma Clipboard und Maprisma Lights) per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen.",
     "category": "desktop",
     "categoryLabel": "Desktop Apps",
     "categoryLabel_de": "Desktop-Apps",
@@ -336,14 +388,14 @@ window.MAPRISMA_APPS = [
     "releases": "https://github.com/maprisma/settings/releases",
     "installCmd": "# AppImage from GitHub Releases (github.com/maprisma/settings/releases):\nsha256sum -c Maprisma-Settings-*-x86_64.AppImage.sha256\nchmod +x Maprisma-Settings-*-x86_64.AppImage\n./Maprisma-Settings-*-x86_64.AppImage\n# Or from source, with bar icon and desktop integration:\ngit clone https://github.com/maprisma/settings.git maprisma-settings\ncd maprisma-settings\n./tools/install-local",
     "highlights": [
-      "New in 0.6.0: top Apps page to launch, update, and remove installed non-Maprisma apps",
-      "One-click install & atomic updates across 18 Maprisma apps",
-      "Panel & system tray icon placement + shared Ask AI safety rules"
+      "New in 0.6.1: full catalog support for Maprisma Clipboard & renamed Maprisma Lights",
+      "Top Apps page to launch, update, and remove installed non-Maprisma apps",
+      "One-click install, atomic updates, panel/tray icon placement & shared Ask AI rules"
     ],
     "highlights_de": [
-      "Neu in 0.6.0: neue Apps-Seite ganz oben zum Starten, Aktualisieren & Entfernen installierter Nicht-Maprisma-Apps",
-      "1-Klick-Installation & atomare Updates für 18 Maprisma-Apps",
-      "Leisten- und System-Tray-Icons + gemeinsame Ask-AI-Sicherheitsregeln"
+      "Neu in 0.6.1: volle Katalog-Unterstützung für Maprisma Clipboard & umbenanntes Maprisma Lights",
+      "Apps-Seite ganz oben zum Starten, Aktualisieren & Entfernen installierter Nicht-Maprisma-Apps",
+      "1-Klick-Installation, atomare Updates, Leisten-/Tray-Icons & gemeinsame Ask-AI-Regeln"
     ],
     "screenshots": [
       {
@@ -550,6 +602,52 @@ window.MAPRISMA_APPS = [
         "src": "assets/screenshots/notifier-history.webp",
         "caption": "Notification history grouped by app, with unread markers",
         "caption_de": "Benachrichtigungsverlauf nach App gruppiert, mit Ungelesen-Markierung"
+      }
+    ]
+  },
+  {
+    "id": "clipboard",
+    "name": "Maprisma Clipboard",
+    "version": "v0.1.0",
+    "repoSlug": "maprisma/clipboard",
+    "tagline": "Fast Wayland clipboard manager with bar icon, image previews, color swatches & pinning",
+    "tagline_de": "Schneller Wayland-Zwischenablage-Manager mit Leisten-Icon, Bildvorschau, Farbfeldern & Anheften",
+    "description": "A fast, 100% local Rust clipboard manager and bar icon for COSMIC, KDE Plasma, and Hyprland. Captures text, code, links, CSS colors, emails, and images over Wayland with live thumbnails, color swatches, instant search, category filters, pinned favorites, keyboard shortcuts (Ctrl+1–9), pause mode, and automatic password-manager secret filtering in 8 languages.",
+    "description_de": "Ein schneller, 100 % lokaler Zwischenablage-Manager in Rust mit Leisten-Icon für COSMIC, KDE Plasma und Hyprland. Erfasst Text, Code, Links, CSS-Farben, E-Mails und Bilder unter Wayland mit Live-Vorschaubildern, Farbfeldern, Sofortsuche, Kategoriefiltern, angehefteten Favoriten, Tastenkürzeln (Strg+1–9), Pause-Modus und automatischem Passwortmanager-Filter in 8 Sprachen.",
+    "category": "monitors",
+    "categoryLabel": "Panel Monitors",
+    "categoryLabel_de": "Panel-Monitore",
+    "featured": false,
+    "tech": "Rust (libcosmic) · Wayland",
+    "desktops": [
+      "COSMIC",
+      "KDE Plasma",
+      "Hyprland"
+    ],
+    "icon": "assets/icons/clipboard.svg",
+    "github": "https://github.com/maprisma/clipboard",
+    "releases": "https://github.com/maprisma/clipboard/releases",
+    "installCmd": "git clone https://github.com/maprisma/clipboard.git maprisma-clipboard\ncd maprisma-clipboard\n./install.sh",
+    "highlights": [
+      "Live image thumbnails, CSS color swatches, monospace code cards, URL domain badges & bottom inspector",
+      "Keyboard-first speed (↑/↓, Enter, Ctrl+1–9, Ctrl+P pin, Esc) + tray icon with top 5 recent clips",
+      "100% local private storage (0600), pause toggle, password-manager secret filter & 8 languages"
+    ],
+    "highlights_de": [
+      "Live-Bildvorschauen, CSS-Farbfelder, Monospace-Codekarten, Link-Badges & Detail-Vorschau",
+      "Tastatur-Schnellzugriff (↑/↓, Enter, Strg+1–9, Strg+P Anheften, Esc) + Tray-Icon mit den letzten 5 Einträgen",
+      "100 % lokal & privat gespeichert (0600), Pause-Schalter, Passwortmanager-Filter & 8 Sprachen"
+    ],
+    "screenshots": [
+      {
+        "src": "assets/screenshots/clipboard-main.webp",
+        "caption": "Searchable clipboard history with category filters, live color swatches, image thumbnails, code snippets, and bottom inspector",
+        "caption_de": "Durchsuchbarer Zwischenablage-Verlauf mit Filtern, Live-Farbfeldern, Bildvorschau, Code-Snippets und Detail-Ansicht"
+      },
+      {
+        "src": "assets/screenshots/clipboard-settings.webp",
+        "caption": "Maprisma Clipboard settings: 8 languages, corners, history limit, image capture & password-manager filtering",
+        "caption_de": "Maprisma-Clipboard-Einstellungen: 8 Sprachen, Ecken, Verlaufslimit, Bilderfassung & Passwortmanager-Filter"
       }
     ]
   },

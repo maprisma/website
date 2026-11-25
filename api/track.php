@@ -25,9 +25,9 @@ const MAIL_CAP_PER_DAY = 20;
 const KEEP_DAYS        = 400;
 const MAX_UNIQUE_PER_DAY = 20000;
 const APP_IDS = [
-    'maprisma', 'theme', 'wlan-monitor', 'llm-monitor', 'bluetooth-monitor',
+    'maprisma', 'theme', 'wlan-monitor', 'llm-monitor', 'bluetooth-monitor', 'hue-lights',
     'settings', 'launcher', 'playground', 'mail', 'dictation', 'video-translator', 'narrator',
-    'notifier', 'control', 'home', 'shell', 'tiling', 'icons', 'addons', 'price-watch',
+    'notifier', 'clipboard', 'control', 'home', 'shell', 'tiling', 'icons', 'addons', 'price-watch',
 ];
 
 function done(int $code): void

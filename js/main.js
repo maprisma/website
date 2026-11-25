@@ -54,6 +54,21 @@
         "# Or build from source on Apple Silicon:\n" +
         "git clone https://github.com/maprisma/macos-llm-monitor.git\n" +
         "cd macos-llm-monitor && ./install-mac.sh"
+    },
+    "hue-lights": {
+      repoSlug: "maprisma/macos-hue-lights",
+      version: "v1.0.0",
+      github: "https://github.com/maprisma/macos-hue-lights",
+      releases: "https://github.com/maprisma/macos-hue-lights/releases",
+      installCmd:
+        "# Download Maprisma-Lights-macOS.zip & .sha256 from GitHub Releases:\n" +
+        "shasum -a 256 -c Maprisma-Lights-macOS.zip.sha256\n" +
+        "unzip Maprisma-Lights-macOS.zip\n" +
+        'xattr -cr "Maprisma Lights.app"\n' +
+        'mv "Maprisma Lights.app" /Applications/\n' +
+        "# Or build from source on Apple Silicon:\n" +
+        "git clone https://github.com/maprisma/macos-hue-lights.git\n" +
+        "cd macos-hue-lights && ./install-mac.sh"
     }
   };
 
