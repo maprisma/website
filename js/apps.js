@@ -366,12 +366,12 @@ window.MAPRISMA_APPS = [
   {
     "id": "settings",
     "name": "Maprisma Settings",
-    "version": "v0.9.0",
+    "version": "v0.9.1",
     "repoSlug": "maprisma/settings",
     "tagline": "Install, update, remove Maprisma & system apps and place bar icons",
     "tagline_de": "Maprisma- & System-Apps installieren, aktualisieren, entfernen & Leisten-Icons platzieren",
-    "description": "The central app manager and control hub for the Maprisma family and your installed Linux apps. Manage all installed non-Maprisma apps on the top Apps page, install, update, and cleanly remove any Maprisma app (including Maprisma Clipboard and Maprisma Lights), place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications. The Optimize page ranks the CachyOS download mirrors, tunes DNS, TCP (BBR) and Wi-Fi power saving, and sets Bluetooth options; the sidebar can be dragged into your own order with movable separators.",
-    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps und deine installierten Linux-Programme. Verwalte alle installierten Nicht-Maprisma-Apps auf der Apps-Seite ganz oben, installiere, aktualisiere und entferne jede Maprisma-App (inkl. Maprisma Clipboard und Maprisma Lights) per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen. Die Seite „Optimieren“ bewertet die CachyOS-Spiegelserver, stimmt DNS, TCP (BBR) und WLAN-Energiesparen ab und setzt Bluetooth-Optionen; die Seitenleiste lässt sich samt verschiebbarer Trennlinien in deine eigene Reihenfolge ziehen.",
+    "description": "The central app manager and control hub for the Maprisma family and your installed Linux apps. Manage all installed non-Maprisma apps on the top Apps page, install, update, and cleanly remove any Maprisma app (including Maprisma Clipboard and Maprisma Lights), place or reorder panel/tray icons on COSMIC, KDE Plasma, and Maprisma Shell, and configure shared Ask AI permissions, Voice, and Notifications. The Optimize page ranks the download mirrors on any Arch-based system (cachyos-rate-mirrors, rate-mirrors or reflector), tunes DNS, TCP (BBR) and Wi-Fi power saving, and sets Bluetooth options; the sidebar can be dragged into your own order with movable separators.",
+    "description_de": "Die zentrale Verwaltung für alle Maprisma-Apps und deine installierten Linux-Programme. Verwalte alle installierten Nicht-Maprisma-Apps auf der Apps-Seite ganz oben, installiere, aktualisiere und entferne jede Maprisma-App (inkl. Maprisma Clipboard und Maprisma Lights) per Klick, platziere Leisten- und Tray-Symbole unter COSMIC, KDE Plasma und Maprisma Shell und steuere gemeinsame Ask-AI-Regeln, Spracheingabe und Benachrichtigungen. Die Seite „Optimieren“ bewertet die Download-Spiegelserver auf jedem Arch-basierten System (cachyos-rate-mirrors, rate-mirrors oder reflector), stimmt DNS, TCP (BBR) und WLAN-Energiesparen ab und setzt Bluetooth-Optionen; die Seitenleiste lässt sich samt verschiebbarer Trennlinien in deine eigene Reihenfolge ziehen.",
     "category": "desktop",
     "categoryLabel": "Desktop Apps",
     "categoryLabel_de": "Desktop-Apps",
@@ -388,13 +388,13 @@ window.MAPRISMA_APPS = [
     "releases": "https://github.com/maprisma/settings/releases",
     "installCmd": "# AppImage from GitHub Releases (github.com/maprisma/settings/releases):\nsha256sum -c Maprisma-Settings-*-x86_64.AppImage.sha256\nchmod +x Maprisma-Settings-*-x86_64.AppImage\n./Maprisma-Settings-*-x86_64.AppImage\n# Or from source, with bar icon and desktop integration:\ngit clone https://github.com/maprisma/settings.git maprisma-settings\ncd maprisma-settings\n./tools/install-local",
     "highlights": [
-      "New in 0.9.0: Optimize page – rank CachyOS mirrors, tune DNS, BBR, Wi-Fi & Bluetooth",
+      "New in 0.9: Optimize page – rank mirrors on any Arch-based system, tune DNS, BBR, Wi-Fi & Bluetooth",
       "Drag the sidebar entries and separators into your own order",
       "Top Apps page to launch, update, and remove installed non-Maprisma apps",
       "One-click install, atomic updates, panel/tray icon placement & shared Ask AI rules"
     ],
     "highlights_de": [
-      "Neu in 0.9.0: Seite „Optimieren“ – CachyOS-Spiegelserver bewerten, DNS, BBR, WLAN & Bluetooth abstimmen",
+      "Neu in 0.9: Seite „Optimieren“ – Spiegelserver auf jedem Arch-System bewerten, DNS, BBR, WLAN & Bluetooth abstimmen",
       "Seitenleisten-Einträge und Trennlinien per Drag & Drop selbst anordnen",
       "Apps-Seite ganz oben zum Starten, Aktualisieren & Entfernen installierter Nicht-Maprisma-Apps",
       "1-Klick-Installation, atomare Updates, Leisten-/Tray-Icons & gemeinsame Ask-AI-Regeln"
@@ -407,8 +407,8 @@ window.MAPRISMA_APPS = [
       },
       {
         "src": "assets/screenshots/settings-optimize.webp",
-        "caption": "Optimize: rank the CachyOS mirrors now or automatically, with the fastest mirrors listed",
-        "caption_de": "Optimieren: CachyOS-Spiegelserver jetzt oder automatisch bewerten, mit den schnellsten Servern"
+        "caption": "Optimize: rank the mirrors now or automatically (here with CachyOS), with the fastest mirrors listed",
+        "caption_de": "Optimieren: Spiegelserver jetzt oder automatisch bewerten (hier mit CachyOS), mit den schnellsten Servern"
       },
       {
         "src": "assets/screenshots/settings-optimize-network.webp",
